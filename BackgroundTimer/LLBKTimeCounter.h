@@ -11,6 +11,7 @@
 @interface LLBKTimeCounter : NSObject
 @property (nonatomic,assign) NSTimeInterval remaintime;
 
-- (void)startTimer:(NSTimeInterval)interval block:(void (^)(NSTimer *timer))block;
+- (instancetype)initWithIdentifier:(NSString *)identifier;
+- (void)startTimer:(NSTimeInterval)remaintime block:(void (^)(NSTimer *timer))block;
 
 @end

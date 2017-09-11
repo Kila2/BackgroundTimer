@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.timeCounter = [[LLBKTimeCounter alloc] init];
-    [self.timeCounter startTimer:10 block:^(NSTimer *timer) {
+    self.timeCounter = [[LLBKTimeCounter alloc] initWithIdentifier:@"2"];
+    [self.timeCounter startTimer:500 block:^(NSTimer *timer) {
         NSLog(@"%f",self.timeCounter.remaintime);
     }];
 }
